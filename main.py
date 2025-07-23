@@ -18,13 +18,14 @@ from bs4 import BeautifulSoup
 
 # === Config ===
 BOT_TOKEN = os.environ["BOT_TOKEN"]
-ADMIN_CHAT_ID = 6972189106
-COOLDOWN_SECONDS = 86400
+ADMIN_CHAT_ID = int(os.environ["ADMIN_CHAT_ID"])
+COOLDOWN_SECONDS = int(os.environ["COOLDOWN_SECONDS"])
 
-LOGIN_URL = "https://kingmodder.com/login/public/"
-RESET_URL_TEMPLATE = "https://kingmodder.com/login/public/keys/reset?userkey={}&reset=1"
-ADMIN_USERNAME = "rc24piyush"
-ADMIN_PASSWORD = "admin123"
+LOGIN_URL = os.environ["LOGIN_URL"]
+RESET_URL_TEMPLATE = os.environ["RESET_URL_TEMPLATE"]
+
+ADMIN_USERNAME = os.environ["ADMIN_USERNAME"]
+ADMIN_PASSWORD = os.environ["ADMIN_PASSWORD"]
 
 ASK_GAME, ASK_KEY = range(2)
 user_request_map = {}
