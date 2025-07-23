@@ -12,11 +12,12 @@ from telegram.ext import (
 )
 import datetime
 import time
+import os
 import requests
 from bs4 import BeautifulSoup
 
 # === Config ===
-BOT_TOKEN = "7536984651:AAFWR-wywUJc4EiSX_SCMgCwEP4P8sweVCg"
+BOT_TOKEN = os.environ["BOT_TOKEN"]
 ADMIN_CHAT_ID = 6972189106
 COOLDOWN_SECONDS = 86400
 
